@@ -1,6 +1,6 @@
 # Tr-Search by Daniel Fonseca da Silva
 ## Overview
-Welcome to the Tr-Search project, developed by Daniel Fonseca da Silkva. This project is a proof of concept (MVP) centered around Business Agility and Information Technology. Tr-Search is a platform that allows users to advertise and view online establishments and products based on highly personalized searches. Users can define specific criteria such as city, neighborhood, category, color, year, and name to find relevant advertisements. Additionally, we offer premium features for corporate users who wish to register and highlight their products and establishments.
+Welcome to the Tr-Search project, developed by Daniel Fonseca da Silva. This project is a proof of concept (MVP) centered around Business Agility and Information Technology. Tr-Search is a platform that allows users to advertise and view online establishments and products based on highly personalized searches. Users can define specific criteria such as city, neighborhood, category, color, year, and name to find relevant advertisements. Additionally, we offer premium features for corporate users who wish to register and highlight their products and establishments.
 
 ## Key Features
 ### Advanced Search
