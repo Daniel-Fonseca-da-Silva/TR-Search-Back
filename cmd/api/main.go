@@ -25,10 +25,17 @@ func main() {
 	db.AutoMigrate(&user.User{})
 	userRepository := handlers.NewUserRepository(db)
 	createUserUseCase := usecases.NewUseCase(userRepository)
-	userHandler := handlers.NewUserHandler(createUserUseCase)
+	deleteUserUseCase := usecases.NewDeleteUserUseCase(userRepository)
+	getUserEmailUseCase := usecases.NewGetUserEmailUseCase(userRepository)
+	updateUserUseCase := usecases.NewUpdateUserUseCase(userRepository)
+
+	userHandler := handlers.NewUserHandler(createUserUseCase, deleteUserUseCase, updateUserUseCase, getUserEmailUseCase)
 
 	r := gin.Default()
-	r.POST("/users", userHandler.CreateUser)
+	r.POST("/user", userHandler.CreateUser)
+	r.DELETE("/user/:id", userHandler.DeleteUser)
+	r.PUT("/user/:id", userHandler.UpdateUser)
+	r.GET("/user/:email", userHandler.GetUserEmail)
 
 	port := os.Getenv("PORT")
 	if port == "" {
